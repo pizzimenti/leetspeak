@@ -1,8 +1,24 @@
 public class Leetspeak {
-  public static void main(String[] args){
+  public static void main(String[] args){}
 
-    public Boolean isLeetspeak(String word){
-      return false;
+    public String isNotLeetspeak(String word){
+      return word;
     }
+
+    public String isLeetspeak(String word) {
+    word = word.toLowerCase();
+    for (Integer i=0; i <= word.length(); i++){
+      word = word.replaceAll("o", "0");
+      word = word.replaceAll("e", "3");
+      word = word.replaceAll("i", "1");
+      if (word.startsWith("s")){
+        word = word.replaceAll("s", "z");
+        word = word.replaceFirst("z", "s");
+      } else {
+        word = word.replaceAll("s", "z");
+      }
+      word = word.replaceAll(" z", " s");
+    }
+    return word;
   }
 }
