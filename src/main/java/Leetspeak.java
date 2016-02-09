@@ -4,7 +4,7 @@ public class Leetspeak {
     public String isNotLeetspeak(String word){
       return word;
     }
-
+//seems like this method is obsolete after your tests
     public String isLeetspeak(String word) {
     word = word.toLowerCase();
     for (Integer i=0; i <= word.length(); i++){
